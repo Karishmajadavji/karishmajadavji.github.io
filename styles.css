@@ -1,0 +1,355 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+
+
+
+/* VARIABLES */
+:root {
+  --primary-color: #89B6A5;
+  --secondary-color: #F96900;
+
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  line-height: 1.54;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* UTILITY CLASSES */
+.container {
+  max-width: 1200px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 4rem;
+  text-align: center;
+  display: inline-block;
+  padding: .6rem 1.5rem;
+  border-radius: 3px;
+  background-color: var(--primary-color);
+  transition: all .5s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #F96900;
+}
+
+
+li {
+    display:inline-block;
+    list-style-type: none;
+    font-size: 30px ;
+  }
+  
+  li i{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+    text-decoration: none;
+  }
+  
+  li i:hover {
+    background-color: #111111;
+  }
+
+/* ABOUT PAGE */
+#about {
+  height: 100vh;
+  background-color: #444;
+}
+
+#navbar {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0rem 3rem;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100vw;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+#navbar ul a {
+  display: inline-block;
+  padding: 1.2rem 2rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+#navbar ul a:hover {
+  color: #F96900;
+}
+
+#about .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: bolder;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  
+}
+
+#title:hover{
+    color:#F96900;
+}
+
+.subtitle{
+  font-size: 2rem;
+  color: #eee;
+  font-weight: 100;
+}
+
+#skills{
+    text-align: center;
+    width: 100%;
+    padding: 5rem .1rem;
+    background-color: var(--primary-color);
+}
+
+#caption {
+  color: rgb(240, 248, 255);
+  font-size: 2.5rem;
+}
+
+#projects {
+  text-align: center;
+  width: 100%;
+  padding: 7rem .1rem;
+  background-color: var(--secondary-color);
+}
+
+#projects .projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 3rem;
+  grid-column-gap: 2rem;
+  margin-top: 2rem;
+}
+
+#projects .container>h1 {
+  font-size: 2.6rem;
+  color: #fff;
+  font-weight: bolder;
+  text-transform: capitalize;
+  margin-bottom: .6rem;
+  line-height: 1.2;
+}
+
+#bottom-line {
+  height: 6px;
+  background-color: #fff;
+  width: 55%;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+#bottom-line-2 {
+    height: 6px;
+    background-color: #fff;
+    width: 30%;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    margin-bottom: 3rem;
+  }
+
+#projects .projects .box {
+  background-color: #eee;
+  border: 5px solid #eee;
+  border-radius: 3px;
+}
+
+#projects .projects .box a {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#projects .projects .box a p {
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+}
+
+
+.code {
+  color: #eee;
+  transition: .5s all ease;
+  font-size: 1.6rem;
+}
+
+#projects .projects .box:hover .code {
+  color: var(--primary-color);
+}
+
+/* CONTACT SECTION */
+#contact {
+  height: 80vh;
+  background-color: #444;
+  color: #fff;
+}
+
+#contact .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#contact .container h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+  padding-bottom: .1rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+#contact .container p {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+#contact .container .social>div a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #eee;
+  margin: 1rem 2rem;
+  font-weight: bolder;
+  transition: transform .5s;
+}
+
+#contact .container .social>div a:hover {
+  transform: translateY(-5px);
+}
+
+
+/* FOOTER SECTION */
+#main-footer {
+  border-top: solid 4px var(--primary-color);
+  padding: 1rem;
+  background-color: #444;
+  color: #fff;
+}
+
+#main-footer .container {
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#main-footer .container p {
+  font-size: 1.2rem;
+}
+
+#main-footer #creator a {
+  text-decoration: underline;
+  color: #eee;
+
+  line-height: 1.5;
+}
+
+/* SMARTPHONE */
+@media (max-width: 600px) {
+  #navbar {
+    padding: 0rem 1rem;
+    justify-content: center;
+  }
+
+  #title{
+    -webkit-text-size-adjust: auto;
+    text-size-adjust: auto;
+  }
+
+  #skills{
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+  #projects .projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #contact .container p {
+    margin-bottom: 1.5rem;
+  }
+
+  #contact .container .social>div a {
+    display: block;
+    margin: 1rem 1.5rem;
+  }
+
+  #main-footer .container {
+    flex-direction: column;
+  }
+
+  #main-footer #creator {
+    margin-top: 1rem;
+  }
+}
